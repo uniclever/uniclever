@@ -3,6 +3,7 @@
 <html>
 
 <head>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <style>#myform {
     text-align: center;
@@ -76,6 +77,37 @@ input.qtyminus { width:25px; height:25px;}</style>
 });
 </script>
 <body id="home">
+    
+    <button id="customButton">Purchase</button>
+    
+    <script>
+  var handler = StripeCheckout.configure({
+    key: 'pk_test_dNcIKY2Pqa0HBhqF3LFJCjW6',
+    image: '/img/documentation/checkout/marketplace.png',
+    locale: 'auto',
+    token: function(token) {
+      // Use the token to create the charge with a server-side script.
+      // You can access the token ID with `token.id`
+    }
+  });
+
+  $('#customButton').on('click', function(e) {
+    // Open Checkout with further options
+    handler.open({
+      name: 'Demo Site',
+      description: '2 widgets',
+      currency: "gbp",
+      amount: 2000
+    });
+    e.preventDefault();
+  });
+
+  // Close Checkout on page navigation
+  $(window).on('popstate', function() {
+    handler.close();
+  });
+</script>
+    
     <a id="menu-link" href="#" class="">
         <span class="menu-icon"></span>
     </a>
@@ -143,7 +175,11 @@ input.qtyminus { width:25px; height:25px;}</style>
                         </div>
                     </div>             
                 </div>
-               <div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
+              <h1>Who Are You?</h1> 
+               <div>
+                   
+                   
+                   <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
                <p></p>
               
                
@@ -272,112 +308,7 @@ input.qtyminus { width:25px; height:25px;}</style>
             </div>
         </section>
         <!-- end vertical center / slider -->
-        <section id="requirements" class="padding-top-bottom bg-clouds text-center">
-            <div class="container">
-                <div class="row header">
-                    <div class="col-md-12">
-                        <h2>Requirements</h2>
-                        <p>Adobe Photoshop CS4+</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <img src="img/ps.png" alt="#" class="img-responsive center-block" width="200" height="200">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="features" class="features-1">
-            <div class="container padding-top-bottom">
-                <div class="row header">
-                    <div class="col-md-12">
-                        <h2>Features</h2>
-                        <p>We are here for you</p>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-12 anima scale-in ">
-                            <article class="text-center">
-                                <img src="img/demo1.jpg" alt="#" class="zoom-img img-responsive center-block">
-                                <h3>​ORGANISED LAYERS</h3>
-                                <p>Nodal point courier towards decay dome advert wonton soup chrome voodoo.</p>
-                            </article>
-                        </div>                       
-                        <div class="col-md-4 col-sm-4 col-xs-12 anima scale-in d1">
-                            <article class="text-center">   
-                                <img src="img/demo2.jpg" alt="#" class="zoom-img img-responsive center-block">
-                                <h3>​SMART OBJECT</h3>
-                                <p>Table plastic concrete silent nano-dome industrial grade. Hotdog marketing.</p>
-                            </article>
-                        </div>             
-                        <div class="col-md-4 col-sm-4 col-xs-12 anima scale-in d2">
-                            <article class="text-center">   
-                                <img src="img/demo3.jpg" alt="#" class="zoom-img img-responsive center-block">
-                                <h3>TRANSPARENT BG</h3>
-                                <p>Grenade wonton soup faded disposable dome cardboard spook refrigerator dolphin.</p>
-                            </article>
-                        </div>
-                    </div>             
-                </div>
-            </div>  
-        </section>
-
-        <section class="cta-1 bg-dark padding-top-bottom text-center white-text">
-            <div class="container-fluid anima scale-in">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <span>​Do you like PAPER CUP - Mockup? </span>
-                        <a class="btn" href="#" data-toggle="modal" data-target="#product-modal"><b>$5</b> Buy now</a>
-                    </div>  
-                </div>
-            </div>
-        </section>  
-        <section id="news" class="content-1 bg-image-2 padding-top-bottom bg-shop">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-6">
-                        <div class="white-box">
-                            <h2><b>NICE Product :)</b></h2>
-                            <p>Scelerisque pulvinar praesent ultrices, amet condimentum wisi felis et. At lobortis risus ipsum praesent urna. Metus lectus duis porttitor. Tellus debitis suspendisse feugiat, non tellus in sed luctus lacus rutrum, iaculis at risus cras vel sit, qui morbi lacus, ultricies semper. Odio ac, diam donec. Tincidunt cursus vel nulla tincidunt, vitae ut tempor ut orci tortor mi</p>
-                            <blockquote class="blockquote-reverse">
-                                <p>Jessica Red</p>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="facts" class="numbers-1 padding-top-bottom text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                        <div class="numbers-item">
-                            <h2 class="counter">367</h2>
-                            <h4>Purchases</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="numbers-item">
-                            <h2><span class="counter">99.1</span> <span>%</span></h2>
-                            <h4>User Ratings</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="numbers-item">
-                            <h2><span class="counter">17</span> <span>k</span></h2>
-                            <h4>Followers</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="cta-1 bg-shop padding-top-bottom text-center ">
-            <div class="container-fluid anima scale-in">
-                <span>​Email for a custom and/or unlimited license.</span>
-                <a class="btn dark" href="#" data-toggle="modal" data-target=".text-modal">Mock-up License</a>
-            </div>
-        </section>
+      
         <section id="contact" class=" padding-top-bottom">
             <div class="container">
                 <div class="row header">
@@ -525,7 +456,7 @@ input.qtyminus { width:25px; height:25px;}</style>
     </div>
 
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">   </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script type="text/javascript" src="js/placeholders.min.js"></script>
