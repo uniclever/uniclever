@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <style>#myform {
     text-align: center;
     padding: 5px;
@@ -121,13 +121,163 @@ input.qtyminus { width:25px; height:25px;}</style>
                     <div class="col-md-12">
                         <h2>PAPER CUP</h2>
                         
-                        <br />shit happens
-                        <p>HQ PSD Mock-up</p>
+                         <!--<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+</style>-->
+<table style="text-align: center" width="100%" class="tg">
+  <tr>
+    <th class="tg-031e"><img src="img/32441.png" alt="Smiley face" height="42"></th>
+    <th class="tg-031e"><img src="img/AibKGkpbT.png" alt="Smiley face" height="42"></th>
+    <th class="tg-031e"><img src="img/couple-copy-14156165104g8nk.png" alt="Smiley face" height="42"></th>
+  </tr>
+  <tr>
+    <td class="tg-031e"><form id='myform' method='POST' action='#'>
+    <input type='button' value='-' class='qtyminus' field='quantity' />
+    <input type='text' name='quantity' value='0' class='qty' />
+    <input type='button' value='+' class='qtyplus' field='quantity' />
+</form></td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e"></td>
+  </tr>
+</table></p>
                     </div>
                 </div>
+             <div class="row header">
+                    <div class="col-md-12">
+                        
+                        <div class="shoes"> 
+		<div class="container"> 
+			<div class="product-one">
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">							
+							<a href="single.html">
+								<img src="images/shoes-1.png" alt="">
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+					
+					</div>
+				</div>
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-2.png" alt="">
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-3.png" alt="">
+								<div class="mask">
+                                    <form id='myform' method='POST' action='#'>
+    <input type='button' value='-' class='qtyminus' field='quantity' />
+    <input type='text' name='quantity' value='0' class='qty' />
+    <input type='button' value='+' class='qtyplus' field='quantity' />
+</form>
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-13.png" alt="">
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="product-one">
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-5.png" alt="">
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-6.png" alt="">
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-7.png" alt="">
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="col-md-3 product-left"> 
+					<div class="p-one simpleCart_shelfItem">
+						
+						<a href="single.html">
+								<img src="images/shoes-8.png" alt="">
+								<div class="mask">
+									<span>Quick View</span>
+								</div>
+							</a>
+						<h4>Aenean placerat</h4>
+						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+                        
+                 </div></div>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <p>Assault voodoo god paranoid tattoo modem kanji drone urban hotdog uplink computer. Dome car papier-mache geodesic wonton soup RAF warehouse woman military-grade numinous shrine nodality pre. Physical drone chrome sunglasses footage vinyl disposable office denim youtube. Systemic-ware advert geodesic alcohol assassin monofilament shrine Chiba voodoo god film convenience store disposable industrial grade camera cartel. Artisanal marketing RAF into advert geodesic sprawl realism woman dome footage courier table drone media youtube ablative.</p>
+                       
                     </div>
                 </div>
             </div>
