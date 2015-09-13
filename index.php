@@ -120,7 +120,20 @@ input.qtyminus { width:25px; height:25px;}</style>
                 <div class="row header">
                     <div class="col-md-12">
                         <h2>PAPER CUP</h2>
+                   <?php
+$mysqli = new mysqli("localhost", "root", "root", "uniclever");
+if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
                         
+                        
+                        if ($res = $mysqli->query("CALL usp_get_template_box()")) {
+    echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
+}
+                     
+                        
+                        var_dump($res->fetch_assoc());
+                        ?>     
                          <!--<style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
@@ -133,11 +146,11 @@ input.qtyminus { width:25px; height:25px;}</style>
     <th class="tg-031e"><img src="img/couple-copy-14156165104g8nk.png" alt="Smiley face" height="42"></th>
   </tr>
   <tr>
-    <td class="tg-031e"><form id='myform' method='POST' action='#'>
+    <td class="tg-031e"><!--<form id='myform' method='POST' action='#'>
     <input type='button' value='-' class='qtyminus' field='quantity' />
     <input type='text' name='quantity' value='0' class='qty' />
     <input type='button' value='+' class='qtyplus' field='quantity' />
-</form></td>
+</form>--></td>
     <td class="tg-031e"></td>
     <td class="tg-031e"></td>
   </tr>
@@ -202,7 +215,7 @@ input.qtyminus { width:25px; height:25px;}</style>
 						<a href="single.html">
 								<img src="images/shoes-13.png" alt="">
 								<div class="mask">
-									<span>Quick View</span>
+									<span>Quick Viewtest123</span>
 								</div>
 							</a>
 						<h4>Aenean placerat</h4>
@@ -559,15 +572,17 @@ input.qtyminus { width:25px; height:25px;}</style>
                 </div>
             </div>
         </div>
-        <section id="style-switcher">
+       <!-- <section id="style-switcher">
             <h2>Colors <a href="#"><i class="fa fa-tint"></i></a></h2>
             <ul>
                 <li id="yellow"></li>
                 <li id="purple"></li>
                 <li id="turquoise"></li>
             </ul>
-        </section>
+        </section>-->
     </div>
+
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
