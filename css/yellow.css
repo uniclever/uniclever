@@ -26,6 +26,12 @@ ECB709
 }
 
 
+
+.bs-wizard-info > i {
+    color: #000;
+}
+
+
 .bs-wizard-stepnum, .bs-wizard-stepnum > a {
     color: #000;
     text-transform: uppercase;
