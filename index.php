@@ -4,6 +4,8 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <style>#myform {
     text-align: center;
     padding: 5px;
@@ -100,10 +102,59 @@ input.qtyminus { width:25px; height:25px;}</style>
                             <div class="hero-unit ">
                                 <h1 class="title"><b>Soapbox</b></h1>
                                 <h3><!--<b>OnePage / OneProduct / OneTemplate</b>--></h3>  
-                                <p><br>
-                               One clever answer for all dirty questions.<br>
-                               <!-- <b>1E-shop</b> is onePage full responsive bootstrap template.<br>-->
-                                </p>
+
+
+
+
+
+
+    <div class="mainmenu-area">
+        <div class="container">
+            <div class="row bs-wizard" style="border-bottom:0;">
+
+
+                <div class="col-xs-4 bs-wizard-step active"><!-- complete -->
+                    <div class="text-center bs-wizard-stepnum"><a href="home.html">Choose</a></div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <a href="#" class="bs-wizard-dot"></a>
+                    <div class="bs-wizard-info text-center"><i class="fa fa-dropbox fa-4x"></i></div>
+                </div>
+
+
+                <div class="col-xs-4 bs-wizard-step disabled"><!-- active -->
+                    <div class="text-center bs-wizard-stepnum"><a href="cart.html"> Check</a></div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <a href="#" class="bs-wizard-dot"></a>
+                    <div class="bs-wizard-info text-center"><i class="fa fa-thumbs-o-up fa-4x"></i></div>
+                </div>
+
+                <div class="col-xs-4 bs-wizard-step disabled"><!-- active -->
+                    <div class="text-center bs-wizard-stepnum">Deliver!</div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <a href="#" class="bs-wizard-dot"></a>
+                    <div class="bs-wizard-info text-center"><i class="fa fa-home fa-4x"></i></div>
+                </div>
+            </div>
+        </div>
+        <br/>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                 <br>
                                 <a class="btn white" href="#" data-toggle="modal" data-target="#product-modal"><!--<b>$5</b>--> Create my box</a>
                             </div>
