@@ -108,187 +108,126 @@ input.qtyminus { width:25px; height:25px;}</style>
                                 <a class="btn white" href="#" data-toggle="modal" data-target="#product-modal"><!--<b>$5</b>--> Create my box</a>
                             </div>
                         </div>  
-                        <div class="col-sm-12 img-hero"><img src="img/logo.png" alt="#" class="zoom-img img-responsive center-block">
-                        </div>
+                       <img src="img/logo.png" alt="#" class="zoom-img img-responsive center-block">
+                    
                     </div>
                 </div>
-                <a href="#start" class="hero-start-link smooth-scroll anchor-link"><i class="fa fa-angle-double-down"></i></span></a>
+                <a href="#requirements1" class="hero-start-link smooth-scroll anchor-link"><i class="fa fa-angle-double-down"></i></span></a>
             </div>
         </section>
+    
+    
+           <section id="requirements1" class="padding-top-bottom text-center">
+          <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12 anima">
+                            <article class="text-center">
+                                <img src="img/AibKGkpbT.png" alt="#" class="zoom-img img-responsive center-block">
+                                <h3>Individual</h3>
+                                <!--<p>Nodal point courier towards decay dome advert wonton soup chrome voodoo.</p>-->
+                            </article>
+                        </div>                       
+                        <div class="col-md-4 col-sm-4 col-xs-12 anima scale-in d1 in">
+                            <article class="text-center">   
+                                <img src="img/couple-copy-14156165104g8nk.png" alt="#" class="zoom-img img-responsive center-block">
+                                <h3>Couple</h3>
+                              <!--  <p>Table plastic concrete silent nano-dome industrial grade. Hotdog marketing.</p>-->
+                            </article>
+                        </div>             
+                        <div class="col-md-4 col-sm-4 col-xs-12 anima scale-in d2 in">
+                            <article class="text-center">   
+                                <img src="img/32441.png" alt="#" class="zoom-img img-responsive center-block">
+                                <h3>Family</h3>
+                               <!-- <p>Grenade wonton soup faded disposable dome cardboard spook refrigerator dolphin.</p>-->
+                            </article>
+                        </div>
+                    </div>             
+                </div>
+               <div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
+               <p></p>
+              
+               
+                <a href="#start" class="hero-start-link smooth-scroll anchor-link"><i class="fa fa-angle-double-down"></i></span></a>
+        </section>
+    
+    
         <section id="start" class="padding-top-bottom text-center">
             <div class="container">
                 <div class="row header">
                     <div class="col-md-12">
-                        <h2>PAPER CUP</h2>
-                   <?php
-$mysqli = new mysqli("localhost", "root", "root", "uniclever");
-if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
-                        
-                        
-                        if ($res = $mysqli->query("CALL usp_get_template_box()")) {
-    echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
-}
-                     
-                        
-                        var_dump($res->fetch_assoc());
-                        ?>     
+                        <h2>Contents Of Your Box</h2>
+             
                          <!--<style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 </style>-->
-<table style="text-align: center" width="100%" class="tg">
-  <tr>
-    <th class="tg-031e"><img src="img/32441.png" alt="Smiley face" height="42"></th>
-    <th class="tg-031e"><img src="img/AibKGkpbT.png" alt="Smiley face" height="42"></th>
-    <th class="tg-031e"><img src="img/couple-copy-14156165104g8nk.png" alt="Smiley face" height="42"></th>
-  </tr>
-  <tr>
-    <td class="tg-031e"><!--<form id='myform' method='POST' action='#'>
-    <input type='button' value='-' class='qtyminus' field='quantity' />
-    <input type='text' name='quantity' value='0' class='qty' />
-    <input type='button' value='+' class='qtyplus' field='quantity' />
-</form>--></td>
-    <td class="tg-031e"></td>
-    <td class="tg-031e"></td>
-  </tr>
-</table></p>
+
                     </div>
                 </div>
-             <div class="row header">
-                    <div class="col-md-12">
-                        
-                        <div class="shoes"> 
-		<div class="container"> 
-			<div class="product-one">
-				<div class="col-md-3 product-left"> 
-					<div class="p-one simpleCart_shelfItem">							
-							<a href="single.html">
-								<img src="images/shoes-1.png" alt="">
-								<div class="mask">
+            
+           
+           <?php    $conn = new mysqli(localhost, root, root, uniclever);
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                } 
+                // define the sql/stored procedure and return records
+                $sql = "CALL usp_get_template_box();";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                   $rowNum = 0;
+                   while($row = $result->fetch_assoc()) {
+                       $rowNum+=1;
+                       if ($rowNum==1) {
+                           echo " 
+                        <div class='shoes'> 
+		<div class='container'><div class='product-one'><div class='item active item-player'><div class='row' style='margin-right:-5px;''>";
+                       } elseif ($rowNum%4==1) {
+                           echo "<div class='item item-player'><div class='row' style='margin-right:-5px;''>";
+                       }
+                       $fil="img/players/" . $row["template_box_item_id"];
+                       if (file_exists($fil) != true) $fil = "img/players/player_blank.jpeg";
+                       echo "<!--<div class='col-xs-3'>
+                               <a href='#x'><img src='" . $fil . "' alt='" . $row["product_id"] . "' class='img-responsive'></a>
+                               </div>-->
+                           
+                           
+                           <div class='col-md-3 product-left'> 
+					<div class='p-one simpleCart_shelfItem'>							
+							<a href='single.html'>
+								<img src='img/products/product" . $row["product_id"] . ".jpg' alt=''>
+								<div class='mask'>
 									<span>Quick View</span>
 								</div>
 							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
+						<h4>" . $row["prod_name_short"] . "</h4>
+						<p><a class='item_add' href='#'><i></i> <span class=' item_price'>£" . $row["unit_price"] . "</span></a></p>
+                         <form id='myform' method='POST' action='#'>
+    <input type='button' value='-' class='qtyminus' field='quantity" . $row["product_id"] . "' />
+    <input type='text' name='quantity" . $row["product_id"] . "' value='0' class='qty' />
+    <input type='button' value='+' class='qtyplus' field='quantity" . $row["product_id"] . "' />
+</form>
 					
 					</div>
 				</div>
-				<div class="col-md-3 product-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						
-						<a href="single.html">
-								<img src="images/shoes-2.png" alt="">
-								<div class="mask">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-						
-					</div>
-				</div>
-				<div class="col-md-3 product-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						
-						<a href="single.html">
-								<img src="images/shoes-3.png" alt="">
-								<div class="mask">
-                                    <form id='myform' method='POST' action='#'>
-    <input type='button' value='-' class='qtyminus' field='quantity' />
-    <input type='text' name='quantity' value='0' class='qty' />
-    <input type='button' value='+' class='qtyplus' field='quantity' />
-</form>
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-						
-					</div>
-				</div>
-				<div class="col-md-3 product-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						
-						<a href="single.html">
-								<img src="images/shoes-13.png" alt="">
-								<div class="mask">
-									<span>Quick Viewtest123</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-						
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="product-one">
-				<div class="col-md-3 product-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						
-						<a href="single.html">
-								<img src="images/shoes-5.png" alt="">
-								<div class="mask">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-						
-					</div>
-				</div>
-				<div class="col-md-3 product-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						
-						<a href="single.html">
-								<img src="images/shoes-6.png" alt="">
-								<div class="mask">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-						
-					</div>
-				</div>
-				<div class="col-md-3 product-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						
-						<a href="single.html">
-								<img src="images/shoes-7.png" alt="">
-								<div class="mask">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-						
-					</div>
-				</div>
-				<div class="col-md-3 product-left"> 
-					<div class="p-one simpleCart_shelfItem">
-						
-						<a href="single.html">
-								<img src="images/shoes-8.png" alt="">
-								<div class="mask">
-									<span>Quick View</span>
-								</div>
-							</a>
-						<h4>Aenean placerat</h4>
-						<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-						
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-                        
-                 </div></div>
-                <div class="row">
+                           
+                           
+                           ";
+                       if ($rowNum%4==0 or $rowNum==$result->num_rows) echo "</div><!--/row--></div><!--/item-->";
+                       
+                  ?>
+                 <?php 
+                       
+                        }
+               
+                } else {
+                    echo "No recent table";
+                }
+                       
+                       $conn->close();?>
+          <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                        
                     </div>
@@ -299,33 +238,36 @@ if ($mysqli->connect_errno) {
         <section id="showcase" class="">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-6 slider">
-                        <div id="as-slider" class="owl-carousel" data-autoplay="4000" data-navigation="false" data-dots="true" data-transition="">
-                            <div class="item m-center" style="background-image: url(img/cup2.jpg);"></div>
-                            <div class="item m-center" style="background-image: url(img/cup3.jpg);"></div>
-                            <div class="item m-center" style="background-image: url(img/cup4.jpg);"></div>
-                            <div class="item m-center" style="background-image: url(img/cup1.jpg);"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 bg-shop" style="height:500px;">
-                        <div class="half-box-right">
-                            <div class="center-vertical">
-                                <div class="center-vertical-box">
-                                    <h1><b>See what's included</b></h1>
-                                    <ul style="padding: 20px;">
-                                        <li>Changeable lid color</li>
-                                        <li>Changeable cup color</li>
-                                        <li>Changeable cup label via smart object</li>
-                                        <li>On/off shadows</li>
-                                        <li>On/off specular</li>
-                                        <li>Changeable background</li>
-                                        <li>High resolution 3000 × 1875px</li>
-                                    </ul>
-                                    <a href="#" data-toggle="modal" data-target="#product-modal" class="btn dark"><b>$5</b> BUY NOW</a>
+                  <form id="contact-form" action="sendemail.php" class="myform" method="post" novalidate>
+                            <div class="row clearfix">
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Name</label>
+                                        <div class="controls">
+                                            <input name="contactName" placeholder="Your name" class="form-control input-lg requiredField" type="text" data-error-empty="Enter name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="contact-mail">Email</label>
+                                        <div class=" controls">
+                                            <input name="email" placeholder="Your email" class="form-control input-lg requiredField" type="email" data-error-invalid="Invalid email address" data-error-empty="Enter email">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                            <div class="form-group">
+                                <label class="control-label" for="contact-message">Message</label>
+                                <div class="controls">
+                                    <textarea name="comments" placeholder="Your message" class="form-control input-lg requiredField" rows="5" data-error-empty="Enter message"></textarea>
+                                </div>
+                            </div>
+                            <p>
+                                <button name="submit" type="submit" class="btn btn-store btn-block" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Email Sent">Send Message</button>
+                            </p>
+                            <input type="hidden" name="submitted" id="submitted3" value="true">
+                        </form>
                 </div>
             </div>
         </section>
