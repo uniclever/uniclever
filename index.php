@@ -98,7 +98,7 @@ input.qtyminus { width:25px; height:25px;}</style>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="hero-unit ">
-                                <h1 class="title"><b>Uniclever</b></h1>
+                                <h1 class="title"><b>Soapbox</b></h1>
                                 <h3><!--<b>OnePage / OneProduct / OneTemplate</b>--></h3>  
                                 <p><br>
                                One clever answer for all dirty questions.<br>
